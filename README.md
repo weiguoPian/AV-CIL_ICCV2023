@@ -47,8 +47,7 @@ For vanilla fine-tuning strategy, please run
 ```
 sh run_incremental_fine_tuning.sh 'dataset' 'modality'
 ```
-
-The 'dataset' should be in [AVE, ksounds, VGGSound_100], and the 'modality' should be in [audio, visual, audio-visual].
+where the 'dataset' should be in [AVE, ksounds, VGGSound_100], and the 'modality' should be in [audio, visual, audio-visual].
 
 
 For the upper bound, please run
@@ -70,8 +69,7 @@ For iCaRL, please run
 ```
 sh run_incremental_lwf.sh 'dataset' 'modality' 'classifier'
 ```
-
-The 'classifier' should be in [NME, FC].
+where the 'classifier' should be in [NME, FC].
 
 
 
@@ -88,8 +86,7 @@ For AFC, please run
 ```
 sh run_incremental_afc.sh 'dataset' 'modality' 'classifier'
 ```
-
-The 'classifier' should be in [NME, LSC].
+where the 'classifier' should be in [NME, LSC].
 
 
 
