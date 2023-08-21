@@ -25,19 +25,48 @@ pip install -r requirements.txt
 
 The original AVE dataset can be downloaded through [link](https://drive.google.com/open?id=1FjKwe79e0u96vdjIVwfRQ1V6SoDHe7kK).
 
+Please put the downloaded AVE videos in [./raw_data/AVE/videos/](./raw_data/AVE/videos/).
+
 
 ### Kinetics-Sounds
 
-The original Kinetics dataset can be downloaded through [link](https://github.com/cvdfoundation/kinetics-dataset). After downloading the Kinetics dataset, please apply our provided video id list ([here](./data/kinetics-sounds/)) to extract the Kinetics-Sounds dataset used in our experiments.
+The original Kinetics dataset can be downloaded through [link](https://github.com/cvdfoundation/kinetics-dataset). After downloading the Kinetics dataset, please apply our provided video id list ([here](./data/kinetics-sounds/)) to extract the Kinetics-Sounds dataset used in our experiments. 
+
+Please put the downloaded videos in [./raw_data/kinetics-sounds/videos/](./raw_data/kinetics-sounds/videos/).
 
 
 ### VGGSound100
 
 The original VGGSound dataset can be downloaded through [link](https://www.robots.ox.ac.uk/~vgg/data/vggsound/). After downloading the VGGSound dataset, please apply our provided video id list ([here](./data/VGGSound_100/)) to extract the Kinetics-Sounds dataset used in our experiments.
 
+Please put the downloaded videos in [./raw_data/VGGSound/videos/](./raw_data/VGGSound/videos/).
+
+
+### Extract audio and frames
+
+After downloading the datasets to the folds, please run the following command to extract the audios and frames
+
+```
+sh extract_audios_frames.sh 'dataset'
+```
+where the 'dataset' should be in [AVE, ksounds, VGGSound_100].
+
+
+## Pre-trained models
+For the audio encoder, please download the pre-trained [AudioMAE](https://drive.google.com/file/d/1ni_DV4dRf7GxM8k-Eirx71WP9Gg89wwu/view?usp=share_link) and put it in [./model/pretrained/](./model/pretrained/). 
+
+
+
+
 ## Feature extraction
 
-To be updated...
+For the pre-trained audio features extraction, please run
+
+```
+sh extract_pretrained_features 'dataset'
+```
+where the 'dataset' should be in [AVE, ksounds, VGGSound_100].
+
 
 
 ## Training & Evaluation

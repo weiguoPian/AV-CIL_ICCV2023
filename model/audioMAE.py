@@ -237,7 +237,6 @@ def test():
     print(out.shape)
 
 
-
     waveform, sr = torchaudio.load('/mnt/data/datasets/wpian/AVE/extracted_audio_11290/1mOHH9xPSRI.wav')
     waveform = waveform - waveform.mean()
 
