@@ -113,17 +113,17 @@ class exemplarLoader(Dataset):
         self.modality = modality
         
         if args.dataset == 'AVE':
-            self.data_root = '/data/home/weiguo/dataset/AVE'
+            self.data_root = '../data/AVE'
             self.visual_pretrained_feature_path = os.path.join(self.data_root, 'visual_pretrained_feature', 'visual_pretrained_feature_dict.npy')
             self.all_visual_pretrained_features = np.load(self.visual_pretrained_feature_path, allow_pickle=True).item()
         else:
             if args.dataset == 'ksounds':
-                self.data_root = '/data/home/weiguo/dataset/kinetics-sounds'
+                self.data_root = '../data/kinetics-sounds'
             elif args.dataset == 'VGGSound':
                 print('dataset: VGGSound')
-                self.data_root = '/data/home/weiguo/dataset/VGGSound'
+                self.data_root = '../data/VGGSound'
             elif args.dataset == 'VGGSound_100':
-                self.data_root = '/data/home/weiguo/dataset/VGGSound_100'
+                self.data_root = '../data/VGGSound_100'
             self.visual_pretrained_feature_path = os.path.join(self.data_root, 'visual_pretrained_feature', 'visual_features.h5')
             self.all_visual_pretrained_features = h5py.File(self.visual_pretrained_feature_path, 'r')
 

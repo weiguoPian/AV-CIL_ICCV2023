@@ -1,10 +1,10 @@
 dataset=$1;
 modality=$2;
-classify=$3;
+classifier=$3;
 
 
-if [ $classify != NME ] && [ $classify != LSC ];then
-    echo "classify must be \"NME\" or \"LSC\".";
+if [ $classifier != NME ] && [ $classifier != LSC ];then
+    echo "classifier must be \"NME\" or \"LSC\".";
     exit;
 fi
 
@@ -72,7 +72,7 @@ CUDA_VISIBLE_DEVICES=3 nohup python -u train_incremental_afc.py \
                                 --num_classes $num_classes \
                                 --class_num_per_step $class_num_per_step \
                                 --modality $modality \
-                                --classify $classify \
+                                --classify $classifier \
                                 --max_epoches $max_epoches \
                                 --num_workers $num_workers \
                                 --memory_size $memory_size \
