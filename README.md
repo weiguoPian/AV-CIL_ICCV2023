@@ -1,7 +1,5 @@
 # Audio-Visual Class-Incremental Learning 
 
-<!-- [Paper]() -->
-
 We introduce <b>audio-visual class-incremental learning</b>, a class-incremental learning scenario for audio-visual video recognition, and propose a method <b>AV-CIL</b>.
 
 <div align="center">
@@ -67,7 +65,16 @@ sh extract_pretrained_features 'dataset'
 ```
 where the 'dataset' should be in [AVE, ksounds, VGGSound_100].
 
+For the running environment of the AudioMAE, we follow the official implementation and use **timm==0.3.2**, for which a [fix](https://github.com/rwightman/pytorch-image-models/issues/420#issuecomment-776459842) is needed to work with Pytorch 1.8.1+.
 
+
+## (option) Use our extracted features directly
+
+We also released the pre-trained features, you can use them directly instead of pre-processing and extracting them from the raw data: [AVE](https://huggingface.co/datasets/wiberg/AV-CIL_features/resolve/main/AVE_features.zip), Kinetics-Sounds [[part-1](https://huggingface.co/datasets/wiberg/AV-CIL_features/resolve/main/KS_features.zip.aa), [part-2](https://huggingface.co/datasets/wiberg/AV-CIL_features/resolve/main/KS_features.zip.ab), [part-3](https://huggingface.co/datasets/wiberg/AV-CIL_features/resolve/main/KS_features.zip.ac)], VGGSound100[[part-1](https://huggingface.co/datasets/wiberg/AV-CIL_features/resolve/main/VS100_features.zip.aa), [part-2](https://huggingface.co/datasets/wiberg/AV-CIL_features/resolve/main/VS100_features.zip.ab), [part-3](https://huggingface.co/datasets/wiberg/AV-CIL_features/resolve/main/VS100_features.zip.ac), [part-4](https://huggingface.co/datasets/wiberg/AV-CIL_features/resolve/main/VS100_features.zip.ad), [part-5](https://huggingface.co/datasets/wiberg/AV-CIL_features/resolve/main/VS100_features.zip.ae), [part-6](https://huggingface.co/datasets/wiberg/AV-CIL_features/resolve/main/VS100_features.zip.af)].
+
+**For Kinetics-Sounds and VGGSound100, please download all the parts and concatenate them before unzipping.**
+
+After obtaining the pre-trained audio and visual features, please put them to ./data/'dataset'/audio_pretrained_feature/ and ./data/'dataset'/visual_pretrained_feature/.
 
 ## Training & Evaluation
 
