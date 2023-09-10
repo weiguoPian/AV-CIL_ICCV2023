@@ -3,3 +3,4 @@
 model/pretrained/
 data/*/*_pretrained_feature/*feature*
 test.py
+*/*.log

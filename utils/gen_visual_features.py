@@ -1,4 +1,8 @@
 import os
+
+# Modify 3 to your avaliable gpu id
+os.environ['CUDA_VISIBLE_DEVICES'] = '3'
+
 import sys
 
 import torch
@@ -15,9 +19,6 @@ parser = argparse.ArgumentParser()
 parser.add_argument('--dataset', type=str, default='AVE', choices=['AVE', 'ksounds', 'VGGSound_100'])
 
 args = parser.parse_args()
-
-# Modify 3 to your avaliable gpu id
-os.environ['CUDA_VISIBLE_DEVICES'] = '3'
 
 ImageProcessor = VideoMAEImageProcessor.from_pretrained("MCG-NJU/videomae-base")
 
