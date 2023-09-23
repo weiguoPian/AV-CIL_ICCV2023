@@ -24,7 +24,7 @@ class IcaAVELoader(Dataset):
                 self.data_root = '../data/kinetics-sounds'
             elif args.dataset == 'VGGSound_100':
                 self.data_root = '../data/VGGSound_100'
-            self.visual_pretrained_feature_path = os.path.join(self.data_root, 'visual_features.h5')
+            self.visual_pretrained_feature_path = os.path.join(self.data_root, 'visual_pretrained_feature', 'visual_features.h5')
             self.all_visual_pretrained_features = h5py.File(self.visual_pretrained_feature_path, 'r')
         
         self.audio_pretrained_feature_path = os.path.join(self.data_root, 'audio_pretrained_feature', 'audio_pretrained_feature_dict.npy')
