@@ -63,7 +63,7 @@ def class_contrastive_loss(feature_1, feature_2, label, temperature=0.1):
     # You can also use the following implementation, which is more consistent with Equation (7) in our paper, 
     # but you may need to further adjust the hyperparameters lam_I and lam_C to get optimal performance.
     # loss = -torch.mean(
-    #     (torch.sum(F.log_softmax(score, dim=-1) * class_matrix, dim=-1) + 1e-6) / (torch.sum(class_matrix, dim=-1) + 1e-6))
+    #     (torch.sum(F.log_softmax(score, dim=-1) * class_matrix, dim=-1)) / torch.sum(class_matrix, dim=-1))
     ###################################################################################################
 
     return loss
