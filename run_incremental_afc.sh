@@ -61,7 +61,7 @@ elif [ $dataset = VGGSound_100 ];then
         exit;
     fi
 else
-    echo "dataset must be \"AVE\", \"ksound\", or \"VGGSound_100\".";
+    echo "dataset must be \"AVE\", \"ksounds\", or \"VGGSound_100\".";
     exit;
 fi
 

@@ -25,13 +25,13 @@ elif [ $dataset = VGGSound_100 ];then
     lam_I=0.1
     lam_C=1.0
 else
-    echo "dataset must be \"AVE\", \"ksound\", or \"VGGSound_100\".";
+    echo "dataset must be \"AVE\", \"ksounds\", or \"VGGSound_100\".";
     exit;
 fi
 
 cd ours
 
-CUDA_VISIBLE_DEVICES=3 nohup python -u train_incremental_ours.py \
+CUDA_VISIBLE_DEVICES=0 nohup python -u train_incremental_ours.py \
                                 --dataset $dataset \
                                 --num_classes $num_classes \
                                 --class_num_per_step $class_num_per_step \
@@ -52,6 +52,6 @@ CUDA_VISIBLE_DEVICES=3 nohup python -u train_incremental_ours.py \
                                 --weight_decay 1e-4 \
                                 --train_batch_size 256 \
                                 --infer_batch_size 128 \
-                                --exemplar_batch_size 128 > nohup_ours.log 2>&1 &
+                                --exemplar_batch_size 128 > nohup_ours_$dataset-I_$lam_I-C_$lam_C.log 2>&1 &
 
 
