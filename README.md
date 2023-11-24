@@ -1,6 +1,6 @@
 # Audio-Visual Class-Incremental Learning 
 
-We introduce <b>audio-visual class-incremental learning</b>, a class-incremental learning scenario for audio-visual video recognition, and propose a method <b>AV-CIL</b>.
+We introduce <b>audio-visual class-incremental learning</b>, a class-incremental learning scenario for audio-visual video recognition, and propose a method <b>AV-CIL</b>. [[paper](https://arxiv.org/pdf/2308.11073.pdf)]
 
 <div align="center">
   <img width="100%" alt="AV-CIL" src="images/model.jpg">
