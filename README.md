@@ -139,10 +139,11 @@ sh run_incremental_ours.sh 'dataset'
 
 If you find this work useful, please consider citing it.
 ```
-@inproceedings{pian2023audiovisual,
+@inproceedings{pian2023audio,
   title={Audio-Visual Class-Incremental Learning},
   author={Pian, Weiguo and Mo, Shentong and Guo, Yunhui and Tian, Yapeng},
-  booktitle={IEEE/CVF International Conference on Computer Vision},
+  booktitle={Proceedings of the IEEE/CVF International Conference on Computer Vision},
+  pages={7799--7811},
   year={2023}
 }
 ```
