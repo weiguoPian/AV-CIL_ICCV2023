@@ -35,7 +35,7 @@ Please put the downloaded videos in [./raw_data/kinetics-sounds/videos/](./raw_d
 
 ### VGGSound100
 
-The original VGGSound dataset can be downloaded through [link](https://www.robots.ox.ac.uk/~vgg/data/vggsound/). After downloading the VGGSound dataset, please apply our provided video id list ([here](./data/VGGSound_100/)) to extract the Kinetics-Sounds dataset used in our experiments.
+The original VGGSound dataset can be downloaded through [link](https://www.robots.ox.ac.uk/~vgg/data/vggsound/). After downloading the VGGSound dataset, please apply our provided video id list ([here](./data/VGGSound_100/)) to extract the VGGSound100 dataset used in our experiments.
 
 Please put the downloaded videos in [./raw_data/VGGSound/videos/](./raw_data/VGGSound/videos/).
 
